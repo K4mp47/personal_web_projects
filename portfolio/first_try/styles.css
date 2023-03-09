@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+  /* CSS HEX */
+  --seasalt: #f9f8f8;
+  --timberwolf: #cdd3ce;
+  --french-gray: #bbb5bd;
+  --sky-magenta: #aa6da3;
+  --dark-violet: #9E0DB4;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0; 
+  padding: 0;
+  font-family: 'Quicksand', serif;
+  color: var(--seasalt);
+  overflow-x: hidden;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: inherit;
+  cursor: default;
+}
+
+/*navigation bar, maybe is good i don't really know*/
+nav {
+  opacity: 50%;
+  top: 0;
+  left: 0;
+  font-size: 4vh;
+  position: fixed;
+  width: 94%;
+  padding-right: 10vw;
+  padding-left: 10vw;
+  gap: 2vw;
+  box-sizing: border-box;
+  background: var(--dark-violet);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  height: 10vh;
+  border-radius: 40px;
+  margin-top: 1vh;
+  margin-left: 3%;
+  z-index: 2;
+  box-shadow: 0 0 10px 5px var(--seasalt);
+}
+
+/*start the First section*/
+#start {
+  width: 100%;
+  height: 130vh;
+  margin-top: 0;
+  background: linear-gradient(
+    180deg,
+    var(--french-gray),
+    var(--sky-magenta)
+  );
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#start h1 {
+  font-size: 50px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+#dynamic-text{
+  text-align: left;
+  padding-left: 20px;
+  height: 60px;
+  margin-top: 50px;
+}
+
+#dynamic-text li{
+  list-style: none;
+  position: relative;
+  top: 0;
+  overflow: hidden;
+  border-right: .15em solid var(--dark-violet);
+  animation: slide 6s steps(2) infinite, typing 3s steps(20) infinite,
+  blink-caret 1s infinite;
+}
+
+#dynamic-text {
+  overflow: hidden;
+}
+
+#start h1:nth-of-type(1){
+  margin-bottom: 0;
+}
+
+#start h1:nth-of-type(2) {
+  height: 60px;
+  margin-top: 0;
+  margin-bottom: 96px;
+}
+
+/*slide animation*/
+@keyframes slide {
+  100% {
+    top: -125px;
+  }
+}
+
+#circle1::before {
+  content: "";
+}
+
+#circle1 {
+  left: -3px;
+  position: absolute;
+  background: linear-gradient(
+    45deg,
+    var(--timberwolf),
+    var(--dark-violet)  
+  );
+  box-shadow: 4px 4px 30px var(--dark-violet);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+#circle2, #circle3 {
+  background: linear-gradient(
+    45deg,
+    var(--timberwolf),
+    var(--dark-violet)  
+  );
+  box-shadow: 4px 4px 30px var(--dark-violet);
+  top: 30vh;
+  left: 40vw;
+  position: absolute;
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+#circle3 {
+  top: 0;
+  left: 70vw;
+  width: 40vw;
+  height: 40vw;
+}
+
+/*Section Projects*/
+
+#Projects {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  background: linear-gradient(
+    -180deg,
+    var(--sky-magenta),
+    var(--french-gray)
+  );
+}
+
+.control:hover {
+  box-shadow: 0px 0px 20px 20px var(--dark-violet);
+  border: 0;
+  color: var(--seasalt);
+}
+
+
+.control {
+  border: 3px dashed var(--dark-violet);
+  height: 30vw;
+  width: 30vw;
+  border-radius: 40px;
+  color: transparent;
+  transition: all 1s ease-in-out;
+}
+
+.project {
+  border-radius: 10px;
+  width: 40vw;
+  height: 40vw;
+}
+
+.control {
+  font-size: 25px;
+  width: 90%;
+  margin: 5%;
+  margin-top: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Media query and other stuff as animation*/
+
+@media (max-width: 428px) {
+  
+  #start {
+    height: 60vh;
+  }
+  
+  #circle3 {
+    top: -10px;
+    left: 80vw;
+    width: 0;
+    height: 0;
+  }
+
+  #dynamic-text {
+    padding: 5px;
+    padding-top: 0;
+    font-size: 15px;
+    height: 13px;
+    margin-bottom: 60px;
+    margin-top: 60px;
+  }
+
+  @keyframes slide {
+    100% {
+      top: -37px;
+    }
+  }
+
+  #start h1 {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 10px;
+  }
+  
+  nav {
+    justify-content: space-between;
+    font-size: 2vh;
+    z-index: 2;
+    height: 5vh;
+  }
+
+  .project {
+    margin: 10px;
+    height: 40vw;
+    width: 40vw;
+  }
+}
+
+/*other animazing animation*/
+@keyframes typing {
+  /*100% {
+    left: 100%;
+    margin: 0 0 0 40px;
+  }
+  */
+  from { width: 0}
+  to { width: 100%}
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--dark-violet) }
+}
+
