@@ -95,6 +95,12 @@ nav {
   blink-caret 1s infinite;
 }
 
+@keyframes slide {
+  100% {
+    top: -125px;
+  }
+}
+
 #dynamic-text {
   overflow: hidden;
 }
@@ -220,11 +226,139 @@ nav {
   height: 40vw;
 }
 
+#About {
+  padding-top: 40px;
+background: linear-gradient(
+    -180deg,
+    var(--french-gray),
+    var(--sky-magenta)
+  );
+}
 
+#About {
+  height: 100vh;
+}
 
+#I {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+#image-container {
+  width: 30vw;
+  height: 30vw;
+  background-image: url("./img/personal_image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+#I p{
+  top: 0;
+  position: relative;
+  margin: 0 10vw 0 5vw;
+  font-size: 30px;
+}
 
+#I p:nth-of-type(1){
+  height: 10vw;
+}
+
+#personal-photo {
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+}
+
+#image-container {
+  border: 12px solid var(--sky-magenta);
+  position: relative;
+  overflow: hidden;
+  border-radius: 10%;
+  margin-right: 5vw;
+  box-shadow: 0 0 30px 30px var(--sky-magenta);
+}
+
+#image-container {
+  transition: transform 1s ease-in-out;
+}
+
+#image-container:hover{
+  transform: scale(1.2);
+}
+
+#filter-image {
+  box-sizing: content-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 40%;
+  z-index: 2;
+  background: var(--sky-magenta);
+  
+}
+
+/*Create the Contact Section*/
+
+#Contact {
+  height: 90vh;
+  background: linear-gradient(
+    180deg,
+    var(--sky-magenta),
+    var(--french-gray)
+  );
+}
+
+.container-particles {
+  overflow: hidden;
+  height: 93%;
+}
+
+.particles {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+.particles span {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: var(--dark-violet);
+  box-shadow: 0 0 0 15px var(--dark-violet),
+  0 0 50px var(--dark-violet),
+  -100px 0 var(--dark-violet),
+  100px 0 var(--dark-violet);
+  margin: 0 4px;
+  border-radius: 50%;
+  animation: animate 20s ease infinite;
+  animation-duration: calc(125s / var(--i));
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(160vh) scale(0) rotate(0deg);
+  }
+  20% {
+    transform: translateY(150vh) scale(1) rotate(0deg);
+  } 
+  100% {  
+    transform: translateY(0vh) scale(0.5) rotate(360deg);
+    opacity: 0%;
+  }
+}
+
+.contact-header {
+  margin: 0;
+  position: relative;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  top: 40%;
+}
 
 
 
@@ -260,7 +394,7 @@ nav {
 
 /*Media query and other stuff as animation*/
 
-@media (max-width: 428px) {
+@media (max-width: 600px) {
   
   #menu {
     height: 60vh;
@@ -308,6 +442,46 @@ nav {
     height: 40vw;
     width: 40vw;
   }
+
+  #I {
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #About p {
+    font-size: 12px;
+    text-align: center;
+    margin: 4px 0 0 0;
+  }
+
+  #I p:nth-of-type(2){
+    margin-bottom: 20%;
+  }
+
+  #image-container {
+    width: 80vw;
+    height: 80vw;
+    margin: 0;
+    pointer-events: none;
+  } 
+ 
+  .particles span {
+    position: relative;
+    bottom: 30px;
+    width: 10px;
+    height: 10px;
+    background: var(--dark-violet);
+    box-shadow: 0 0 5px 20px var(--dark-violet),
+    0 0 0px var(--dark-violet),
+    0px 0 var(--dark-violet),
+    0px 0 var(--dark-violet);
+    margin: 0 4px;
+    border-radius: 50%;
+    animation: animate 20s ease infinite;
+    animation-duration: calc(125s / var(--i));
+  }
 }
 
 /*other animazing animation*/
@@ -326,10 +500,5 @@ nav {
   50% { border-color: var(--dark-violet) }
 }
 
-@keyframes slide {
-  100% {
-    top: -125px;
-  }
-}
 
 
