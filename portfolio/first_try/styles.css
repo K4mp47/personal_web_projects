@@ -160,6 +160,7 @@ nav {
 /*Section Projects*/
 
 #Projects {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -185,7 +186,7 @@ nav {
   opacity: 70%;
 }
  
-
+/*
 .control:hover {
   border: 0;
   color: var(--seasalt);
@@ -212,7 +213,7 @@ nav {
   );
   transition: all 2s;
 }
-
+*/
 .control {
   box-shadow: 0px 0px 20px 20px var(--dark-violet);
   position: relative;
@@ -238,6 +239,18 @@ nav {
   );
 }
 
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 2.2s ease;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  color: var(--seasalt);
+}
+
 .project {
   border-radius: 10px;
   width: 40vw;
@@ -259,6 +272,7 @@ background: linear-gradient(
 }
 
 #I {
+  padding-top: 20vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -270,6 +284,13 @@ background: linear-gradient(
   background-image: url("./img/personal_image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  border: 12px solid var(--sky-magenta);
+  position: relative;
+  overflow: hidden;
+  border-radius: 10%;
+  margin-right: 5vw;
+  box-shadow: 0 0 30px 30px var(--sky-magenta);
+  transition: transform 1s ease-in-out;
 }
 
 #I p{
@@ -287,23 +308,6 @@ background: linear-gradient(
   width: 100%;
   height: 100%;
   box-sizing: content-box;
-}
-
-#image-container {
-  border: 12px solid var(--sky-magenta);
-  position: relative;
-  overflow: hidden;
-  border-radius: 10%;
-  margin-right: 5vw;
-  box-shadow: 0 0 30px 30px var(--sky-magenta);
-}
-
-#image-container {
-  transition: transform 1s ease-in-out;
-}
-
-#image-container:hover{
-  transform: scale(1.2);
 }
 
 #filter-image {
@@ -432,7 +436,7 @@ background: linear-gradient(
 @media (max-width: 600px) {
   
   #menu {
-    height: 60vh;
+    height: 100vh;
   }
   
   #circle3 {
@@ -539,6 +543,7 @@ background: linear-gradient(
   from, to { border-color: transparent }
   50% { border-color: var(--dark-violet) }
 }
+
 
 
 
