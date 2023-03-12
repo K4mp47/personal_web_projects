@@ -2,11 +2,11 @@
 
 :root {
   /* CSS HEX */
-  --seasalt: #FDE8E9;
-  --timberwolf: #E3BAC6;
-  --french-gray: #BC9EC1;  
-  --sky-magenta: #596475;
-  --dark-violet: #1F2232;
+  --seasalt: #695958;
+  --timberwolf: #B6C8A9;
+  --french-gray: #C8EAD3;  
+  --sky-magenta: #CFFFE5;
+  --dark-violet: #CEDADA;
 }
 
 html {
@@ -160,7 +160,7 @@ nav {
 /*Section Projects*/
 
 #Projects {
-  height: 100vh;
+  height: 350vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
