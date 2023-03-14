@@ -24,10 +24,13 @@ body {
 }
 
 a, a:hover {
+  padding: 10px;
   text-decoration: none;
   color: inherit;
   cursor: default;
+  transition: 1s ease;
 }
+
 
 /*navigation bar, maybe is good i don't really know*/
 nav {
@@ -52,6 +55,13 @@ nav {
   margin-left: 3%;
   z-index: 3;
   box-shadow: 0 0 10px 5px var(--seasalt);
+}
+
+.active {
+  background-color: var(--seasalt);
+  color: var(--sky-magenta);
+  padding: 0.7vw;
+  border-radius: 1vw;
 }
 
 /*start the First section*/
@@ -85,22 +95,6 @@ nav {
   margin-top: 50px;
 }
 
-#dynamic-text li{
-  list-style: none;
-  position: relative;
-  top: 0;
-  overflow: hidden;
-  border-right: .15em solid var(--dark-violet);
-  animation: slide 6s steps(2) infinite, typing 3s steps(20) infinite,
-  blink-caret 1s infinite;
-}
-
-@keyframes slide {
-  100% {
-    top: -125px;
-  }
-}
-
 #dynamic-text {
   overflow: hidden;
 }
@@ -131,7 +125,19 @@ nav {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  animation: levitate 5s cubic-bezier(.46,.03,.52,.96) infinite; 
 }
+
+@keyframes levitate {
+  50% {
+    transform: translateY(-10vh);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 
 #circle2, #circle3 {
   background: linear-gradient(
@@ -148,6 +154,8 @@ nav {
   height: 200px;
   border-radius: 50%;
   z-index: 0;
+  animation: levitate 5s cubic-bezier(.46,.03,.52,.96) infinite; 
+  animation-delay: 2s;
 }
 
 #circle3 {
@@ -155,12 +163,13 @@ nav {
   left: 70vw;
   width: 40vw;
   height: 40vw;
+  animation-delay: 4s;
 }
 
 /*Section Projects*/
 
 #Projects {
-  height: 350vh;
+  min-height: 150vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -260,14 +269,11 @@ nav {
 
 #About {
   padding-top: 40px;
-background: linear-gradient(
+  background: linear-gradient(
     -180deg,
     var(--french-gray),
     var(--sky-magenta)
   );
-}
-
-#About {
   height: 100vh;
 }
 
@@ -325,6 +331,7 @@ background: linear-gradient(
 
 #Contact {
   height: 100vh;
+  width: 100%;
   font-size: 2em;
   overflow: hidden;
   background: linear-gradient(
@@ -353,11 +360,11 @@ background: linear-gradient(
   position: relative;
   width: 20px;
   height: 20px;
-  background: var(--dark-violet);
-  box-shadow: 0 0 0 15px var(--dark-violet),
-  0 0 50px var(--dark-violet),
-  -100px 0 var(--dark-violet),
-  100px 0 var(--dark-violet);
+  background: var(--seasalt);
+  box-shadow: 0 0 0 15px var(--seasalt),
+  0 0 50px var(--seasalt),
+  -100px 0 var(--seasalt),
+  100px 0 var(--seasalt);
   margin: 0 4px;
   border-radius: 50%;
   animation: animate 20s ease infinite;
@@ -399,37 +406,7 @@ background: linear-gradient(
 
 .icon {
   padding: 0 15vh 0 15vh;
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 /*Media query and other stuff as animation*/
 
@@ -440,10 +417,9 @@ background: linear-gradient(
   }
   
   #circle3 {
-    top: -10px;
-    left: 80vw;
-    width: 0;
-    height: 0;
+    top: 60vh;
+    width: 50vw;
+    height: 50vw;
   }
 
   #dynamic-text {
@@ -453,12 +429,6 @@ background: linear-gradient(
     height: 13px;
     margin-bottom: 60px;
     margin-top: 60px;
-  }
-
-  @keyframes slide {
-    100% {
-      top: -37px;
-    }
   }
 
   #menu h1 {
@@ -474,6 +444,10 @@ background: linear-gradient(
     font-size: 2vh;
     z-index: 2;
     height: 5vh;
+  }
+
+  .active {
+    padding: 1vw;
   }
 
   .project {
@@ -511,11 +485,11 @@ background: linear-gradient(
     bottom: 30px;
     width: 10px;
     height: 10px;
-    background: var(--dark-violet);
-    box-shadow: 0 0 5px 20px var(--dark-violet),
-    0 0 0px var(--dark-violet),
-    0px 0 var(--dark-violet),
-    0px 0 var(--dark-violet);
+    background: var(--seasalt);
+    box-shadow: 0 0 5px 20px var(--seasalt),
+    0 0 0px var(--seasalt),
+    0px 0 var(--seasalt),
+    0px 0 var(--seasalt);
     margin: 0 4px;
     border-radius: 50%;
     animation: animate 20s ease infinite;
@@ -527,23 +501,3 @@ background: linear-gradient(
     font-size: 10vw;
   } 
 }
-
-/*other animazing animation*/
-@keyframes typing {
-  /*100% {
-    left: 100%;
-    margin: 0 0 0 40px;
-  }
-  */
-  from { width: 0}
-  to { width: 100%}
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: var(--dark-violet) }
-}
-
-
-
-
