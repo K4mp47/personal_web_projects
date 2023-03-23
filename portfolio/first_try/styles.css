@@ -413,13 +413,15 @@ nav {
 @media (max-width: 600px) {
   
   #menu {
+    width: 100%;
     height: 100vh;
+    overflow-x: hidden;
   }
   
   #circle3 {
     top: 60vh;
-    width: 50vw;
-    height: 50vw;
+    width: 30vw;
+    height: 30vw;
   }
 
   #dynamic-text {
