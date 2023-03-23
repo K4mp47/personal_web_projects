@@ -27,11 +27,10 @@ function App () {
     // there we have the code for change the background randomly;
     const color = "rgb(" + red + ", " + blue + ", " + green + ")";
     
-    document.documentElement.style.setProperty('--general-color', color);
-    
+    document.documentElement.style.setProperty('--general-color', color); 
     setTimeout(() => {
       setAnimate(false);
-    }, 2000);
+    }, 1000);
   }
 
   const getQuotes = () => {
