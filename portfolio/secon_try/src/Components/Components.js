@@ -49,7 +49,7 @@ export const DivPresentation = styled.div`
     left: 0;
     display: flex;
     justify-content: left;
-    width: 24%;
+    width: 32%;
     height: 100%;
     z-index: 5;
     box-shadow: 0 0 5px 5px #090909;
@@ -57,7 +57,7 @@ export const DivPresentation = styled.div`
 
 export const DivFirstLook = styled.div`
     background-color: ${color[0]};
-    color: ${color[2]};
+    color: ${color[3]};
     font-family: 'Kanit';
     position: absolute;
     top: 0;
@@ -126,7 +126,7 @@ export const DivColumn = styled.div`
     background-size: 50px 50px;
     position: absolute;
     top: 0%;
-    left: 24%;
+    left: 32%;
     display: flex;
     justify-content: left;
     width: 8%;
@@ -140,7 +140,7 @@ export const ImageContainer = styled.div`
     background-color: ${color[3]};
     position: absolute;
     top: 10%;
-    left: 30%;
+    left: 37%;
     display: flex;
     justify-content: left;
     width: 28%;
@@ -180,10 +180,10 @@ export const DivDescription = styled.div`
     background-color: ${color[3]};
     position: absolute;
     top: 76%;
-    left: 24%;
+    left: 32%;
     display: flex;
     justify-content: left;
-    width: 76%;
+    width: 68%;
     height: 24%;
     z-index: 4;
     box-shadow: 0 0 10px 10px ${color[0]};
