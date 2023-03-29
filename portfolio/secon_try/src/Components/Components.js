@@ -49,7 +49,7 @@ export const DivPresentation = styled.div`
     left: 0;
     display: flex;
     justify-content: left;
-    width: 32%;
+    width: 24%;
     height: 100%;
     z-index: 5;
     box-shadow: 0 0 5px 5px #090909;
@@ -126,7 +126,7 @@ export const DivColumn = styled.div`
     background-size: 50px 50px;
     position: absolute;
     top: 0%;
-    left: 32%;
+    left: 24%;
     display: flex;
     justify-content: left;
     width: 8%;
@@ -140,7 +140,7 @@ export const ImageContainer = styled.div`
     background-color: ${color[3]};
     position: absolute;
     top: 10%;
-    left: 37%;
+    left: 30%;
     display: flex;
     justify-content: left;
     width: 28%;
@@ -166,6 +166,7 @@ export const ImageCreator = styled.div`
     background-image: url('personal_image.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     position: absolute;
     top: 5%;
     left: 5%;
@@ -180,10 +181,10 @@ export const DivDescription = styled.div`
     background-color: ${color[3]};
     position: absolute;
     top: 76%;
-    left: 32%;
+    left: 24%;
     display: flex;
     justify-content: left;
-    width: 68%;
+    width: 76%;
     height: 24%;
     z-index: 4;
     box-shadow: 0 0 10px 10px ${color[0]};
