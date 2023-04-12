@@ -8,10 +8,10 @@ const NavBar = () => {
     setNav(!nav);
   }
 
-  return (
+  return (        
     <div className='flex h-24 items-center text-xl font-bold justify-between mx-auto'>
       <h1 className='w-full uppercase p-4 md:p-10 text-4xl font-bold text-[var(--titles)]'>K4mp4t</h1>
-      <ul className='md:flex mx-30 hidden md:p-10'>
+      <ul className='md:flex mx-30 hidden'>
         <li className='p-6'>Home</li>
         <li className='p-6'>Projects</li>
         <li className='p-6'>About</li>
