@@ -46,7 +46,7 @@ const Background3D = () => {
 
     // Set auto-rotate
     controls.autoRotate = true;
-    controls.autoRotateSpeed = 0.5;
+    controls.autoRotateSpeed = 10;
 
     // Animation loop
     const animate = () => {
