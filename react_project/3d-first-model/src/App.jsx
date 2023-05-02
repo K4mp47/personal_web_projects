@@ -9,10 +9,6 @@ function App() {
   return (
     <div className="App">
       <Model13D/>
-      <Title/> 
-      <Face/>
-      <About/>
-      <Projects/>
     </div>
   );
 }
